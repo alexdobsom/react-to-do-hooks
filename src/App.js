@@ -36,7 +36,6 @@ function App() {
     )
   }
 
-
   const TodoForm = () => {
     const [value, setValue] = useState('');
 
@@ -49,7 +48,7 @@ function App() {
     }
 
     function addTodo(value) {
-      let newTodos = [...todos, {text: value}];
+      let newTodos = [...todos, {text: value, isCompleted: false}];
       setTodos(newTodos);
     }
 
@@ -59,6 +58,7 @@ function App() {
       </form>
     )
   }
+
 
   return (
     <div>
